@@ -2,8 +2,6 @@ import request from 'graphql-request';
 import Head from 'next/head';
 import { Container } from '../../components/container';
 import { AppProvider } from '../../components/contexts/appContext';
-import { Footer } from '../../components/footer';
-import { Header } from '../../components/header';
 import { Layout } from '../../components/layout';
 import { MorePosts } from '../../components/more-posts';
 import {
@@ -28,7 +26,6 @@ export default function Post({ publication, posts, tag }: Props) {
 				<Head>
 					<title>{title}</title>
 				</Head>
-				<Header />
 				<Container className="flex flex-col items-stretch gap-10 px-5 pb-10">
 					<div className="flex flex-col gap-1 pt-5">
 						<p className="font-bold uppercase text-slate-500 dark:text-neutral-400">Tag</p>
@@ -36,7 +33,6 @@ export default function Post({ publication, posts, tag }: Props) {
 					</div>
 					<MorePosts context="tag" posts={posts} />
 				</Container>
-				<Footer />
 			</Layout>
 		</AppProvider>
 	);

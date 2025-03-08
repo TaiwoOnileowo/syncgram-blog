@@ -104,7 +104,7 @@ export const Search = () => {
 	});
 
 	return (
-		<div className="relative col-span-1">
+		<div className="relative col-span-1 w-full max-w-lg">
 			<input
 				type="text"
 				ref={searchInputRef}

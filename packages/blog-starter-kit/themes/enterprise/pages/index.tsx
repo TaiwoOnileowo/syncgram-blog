@@ -9,8 +9,6 @@ import { Waypoint } from 'react-waypoint';
 import { Button } from '../components/button';
 import { Container } from '../components/container';
 import { AppProvider } from '../components/contexts/appContext';
-import { Footer } from '../components/footer';
-import { Header } from '../components/header';
 import { HeroPost } from '../components/hero-post';
 import { ArticleSVG, ChevronDownSVG } from '../components/icons';
 import { Layout } from '../components/layout';
@@ -120,13 +118,12 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 						}}
 					/>
 				</Head>
-				<Header />
 				<Container className="flex flex-col items-stretch gap-10 px-5 pb-10">
 					<Navbar />
 
 					{allPosts.length === 0 && (
 						<div className="grid grid-cols-1 py-20 lg:grid-cols-3">
-							<div className="col-span-1 flex flex-col items-center gap-5 text-center text-slate-700 dark:text-neutral-400 lg:col-start-2">
+							<div className="col-span-1 flex flex-col items-center gap-5 text-center text-slate-700 lg:col-start-2 dark:text-neutral-400">
 								<div className="w-20">
 									<ArticleSVG clasName="stroke-current" />
 								</div>
@@ -153,9 +150,9 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 					</div>
 
 					{allPosts.length > 0 && (
-						<div className="bg-primary-50 grid grid-cols-4 rounded-lg px-5 py-5 dark:bg-neutral-900 md:py-10">
+						<div className="grid grid-cols-4 rounded-lg bg-[#EAEEFE] px-5 py-5 md:py-10 dark:bg-neutral-900">
 							<div className="col-span-full md:col-span-2 md:col-start-2">
-								<h2 className="text-primary-600 dark:text-primary-500 mb-5 text-center text-lg font-semibold">
+								<h2 className="text-sharpBlue dark:text-primary-500 mb-5 text-center text-xl font-semibold">
 									Subscribe to our newsletter for updates and changelog.
 								</h2>
 								<SubscribeForm />
@@ -182,7 +179,6 @@ export default function Index({ publication, initialAllPosts, initialPageInfo }:
 						</>
 					)}
 				</Container>
-				<Footer />
 			</Layout>
 		</AppProvider>
 	);
